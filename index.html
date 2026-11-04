@@ -28,6 +28,25 @@
     />
 
     <style>
+      /* Palet calm: krem hangat, sage, dan slate kebiruan yang lembut */
+      :root {
+        --color-amber-50: #faf6ef;
+        --color-amber-100: #f1e8d9;
+        --color-amber-200: #e4d5bd;
+        --color-amber-300: #dccaa8;
+        --color-amber-400: #cdb58d;
+        --color-amber-700: #8a6743;
+        --color-amber-800: #6d5334;
+        --color-emerald-100: #e3efe9;
+        --color-emerald-300: #a9cdbd;
+        --color-emerald-400: #7fb39b;
+        --color-emerald-600: #4f7a68;
+        --color-emerald-700: #3f6656;
+        --color-sky-100: #e4eef4;
+        --color-sky-700: #4a6f86;
+        --color-slate-800: #2f3b4c;
+        --color-slate-900: #243142;
+      }
       body {
         font-family: "Inter", sans-serif;
       }
@@ -53,11 +72,11 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #b45309;
+        background: #8a6743;
         transition: width 0.2s;
       }
       .nav-link:hover {
-        color: #b45309;
+        color: #8a6743;
       }
       .nav-link:hover::after {
         width: 100%;
@@ -66,8 +85,8 @@
         display: inline-block;
         padding: 4px 12px;
         border-radius: 9999px;
-        background: #fffbeb;
-        color: #b45309;
+        background: #f6f1e8;
+        color: #8a6743;
         font-size: 0.75rem;
         font-weight: 600;
       }
@@ -77,7 +96,7 @@
         transition: color 0.2s;
       }
       .mobile-link:hover {
-        color: #b45309;
+        color: #8a6743;
       }
       .card-hover {
         transition:
@@ -85,17 +104,17 @@
           box-shadow 0.3s;
       }
       .card-hover:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(36, 49, 66, 0.08);
       }
       .grad-amber {
-        background: linear-gradient(135deg, #0f172a, #b45309);
+        background: linear-gradient(135deg, #243142, #8a7255);
       }
       .grad-slate {
-        background: linear-gradient(135deg, #1e293b, #047857);
+        background: linear-gradient(135deg, #2f4048, #5f8f7b);
       }
       .grad-brown {
-        background: linear-gradient(135deg, #3b2a20, #b45309);
+        background: linear-gradient(135deg, #3d3a36, #9c8466);
       }
       .logo-fallback {
         font-weight: 700;
@@ -191,10 +210,9 @@
               ></div>
               <!-- Foto: letakkan di src/img/adi.jpg (jika belum ada, tampil inisial) -->
               <div
-                class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-[2.5rem] grad-amber flex items-center justify-center shadow-2xl rotate-3 overflow-hidden"
+                class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-[2.5rem] grad-amber flex items-center justify-center shadow-xl overflow-hidden"
               >
-                <span
-                  class="text-white text-8xl font-extrabold -rotate-3 tracking-tight"
+                <span class="text-white text-8xl font-extrabold tracking-tight"
                   >MA</span
                 >
                 <img
@@ -868,9 +886,12 @@
             CARA MENGISI VIDEO: letakkan file di src/video/tsb-kobura.mp4
             atau ganti data-video dengan link YouTube / YouTube Shorts.
           -->
-          <div class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div
+            class="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 items-start"
+          >
+            <!-- TSB x Kobura -->
             <article
-              class="bg-white text-slate-800 rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover sm:col-start-1 sm:col-end-3 sm:max-w-[calc(50%-1rem)] sm:justify-self-center w-full"
+              class="bg-white text-slate-800 rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover flex flex-col"
             >
               <div
                 class="video-slot aspect-[9/16] grad-amber"
@@ -886,6 +907,20 @@
                   Perkembangan pendampingan setup sistem operasional dan standar
                   kerja tim di lapangan.
                 </p>
+              </div>
+            </article>
+
+            <!-- Nogaje (tanpa keterangan) -->
+            <article
+              class="bg-white text-slate-800 rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-hover flex flex-col"
+            >
+              <div
+                class="video-slot aspect-[9/16] grad-brown"
+                data-video="./src/video/nogaje.mp4"
+                data-poster="./src/img/projects/nogaje-thumb.jpg"
+              ></div>
+              <div class="px-6 py-4">
+                <span class="badge">Nogaje</span>
               </div>
             </article>
           </div>
